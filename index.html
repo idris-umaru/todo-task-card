@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Card</title>
+    <link rel="stylesheet" href="Card.css">
+</head>
+<body>
+    <main>
+        <article data-testid="test-todo-card" class="task-card">
+            <header class="task-header">
+                <div class="task-main">
+                    <input type="checkbox" id="complete-toggle" data-testid="test-todo-complete-toggle">
+                    <label for="complete-toggle" class="checkbox-label"></label>
+                    <div class="task-content">
+                        <h2 data-testid="test-todo-title" class="task-title">Complete project proposal</h2>
+                        <p data-testid="test-todo-description" class="task-description">Write and finalize the Q2 project proposal for the new marketing campaign.</p>
+                    </div>
+                </div>
+                <div class="task-meta">
+                    <span data-testid="test-todo-priority" class="priority-badge priority-high">High</span>
+                    <span data-testid="test-todo-status" class="status-indicator status-in-progress">In Progress</span>
+                </div>
+            </header>
+            <div class="task-details">
+                <div class="task-dates">
+                    <time data-testid="test-todo-due-date" datetime="2026-04-15T17:00:00" class="due-date">Due Apr 15, 2026</time>
+                    <time data-testid="test-todo-time-remaining" class="time-remaining">Due in 5 days</time>
+                </div>
+                <ul data-testid="test-todo-tags" class="tags-list" role="list">
+                    <li data-testid="test-todo-tag-work" class="tag">Work</li>
+                    <li data-testid="test-todo-tag-urgent" class="tag">Urgent</li>
+                </ul>
+            </div>
+            <footer class="task-actions">
+                <button data-testid="test-todo-edit-button" class="action-button edit-button" aria-label="Edit task">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Edit
+                </button>
+                <button data-testid="test-todo-delete-button" class="action-button delete-button" aria-label="Delete task">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3,6 5,6 21,6"></polyline>
+                        <path d="M19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2-2h4a2,2 0 0,1,2,2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Delete
+                </button>
+            </footer>
+        </article>
+    </main>
+    <script src="Card.js"></script>
+</body>
+</html>
