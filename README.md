@@ -2,7 +2,7 @@
 
 A polished single-task card UI built with semantic HTML, responsive CSS, and a small JavaScript interaction layer.
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - HTML
 - CSS
