@@ -2,6 +2,12 @@
 
 A polished single-task card UI built with semantic HTML, responsive CSS, and a small JavaScript interaction layer.
 
+## 🧱 Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+
 ## GitHub Repo
 
 https://github.com/idris-umaru/todo-task-card
