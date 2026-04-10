@@ -21,6 +21,7 @@ No build tools or package manager are required.
 - Displayed the due date and remaining time with readable formatting and a 30-second refresh interval.
 - Designed the card with startup-friendly polished visuals, soft gradients, and subtle hover motion.
 
+
 ## Trade-offs
 
 - No persistence: edits and deletions only last for the current page session.
