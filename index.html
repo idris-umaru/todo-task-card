@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,13 @@
   </head>
   <body>
     <main class="page">
-      <article class="task-card" data-testid="test-todo-card" aria-label="Task card">
+      <article
+        class="task-card"
+        data-testid="test-todo-card"
+        aria-label="Task card"
+      >
         <div class="card-glow" aria-hidden="true"></div>
+
         <header class="card-header">
           <div class="status-block">
             <label class="checkbox-wrapper" for="complete-toggle">
@@ -21,13 +26,30 @@
               <span class="checkbox-custom" aria-hidden="true"></span>
               <span class="checkbox-text">Complete</span>
             </label>
+
             <div class="title-area">
               <h2 class="task-title" data-testid="test-todo-title">
-               Complete Todo Task
+                Complete Todo Task
               </h2>
-              <p class="task-description" data-testid="test-todo-description">
-                Why users onboarding is crucial for product success and why are they dropping off.
-              </p>
+
+              <div
+                class="collapsible-section collapsed"
+                data-testid="test-todo-collapsible-section"
+              >
+                <p class="task-description" data-testid="test-todo-description">
+                  Why users onboarding is crucial for product success and why
+                  are they dropping off.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="expand-toggle"
+                data-testid="test-todo-expand-toggle"
+                aria-expanded="false"
+              >
+                Show full description
+              </button>
             </div>
           </div>
 
@@ -40,14 +62,94 @@
               High
             </span>
             <span
+              class="priority-indicator"
+              data-testid="test-todo-priority-indicator"
+              aria-hidden="true"
+            ></span>
+            <span
               class="badge badge-status"
               data-testid="test-todo-status"
               aria-label="Status: In progress"
             >
               In progress
             </span>
+            <label class="status-select-wrapper">
+              <span class="visually-hidden">Task status</span>
+              <select
+                data-testid="test-todo-status-control"
+                class="status-control"
+              >
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+              </select>
+            </label>
           </div>
         </header>
+
+        <section class="edit-form" data-testid="test-todo-edit-form" hidden>
+          <div class="form-grid">
+            <label class="field-group">
+              <span>Title</span>
+              <input
+                type="text"
+                class="field-input"
+                data-testid="test-todo-edit-title-input"
+                aria-label="Edit title"
+              />
+            </label>
+
+            <label class="field-group">
+              <span>Description</span>
+              <textarea
+                class="field-textarea"
+                rows="4"
+                data-testid="test-todo-edit-description-input"
+                aria-label="Edit description"
+              ></textarea>
+            </label>
+
+            <label class="field-group">
+              <span>Priority</span>
+              <select
+                class="field-select"
+                data-testid="test-todo-edit-priority-select"
+                aria-label="Edit priority"
+              >
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Due date</span>
+              <input
+                type="datetime-local"
+                class="field-input"
+                data-testid="test-todo-edit-due-date-input"
+                aria-label="Edit due date"
+              />
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="button"
+              class="action-button action-save"
+              data-testid="test-todo-save-button"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              class="action-button action-cancel"
+              data-testid="test-todo-cancel-button"
+            >
+              Cancel
+            </button>
+          </div>
+        </section>
 
         <section class="card-meta">
           <div class="meta-item">
@@ -57,17 +159,24 @@
               id="dueDate"
               data-testid="test-todo-due-date"
               datetime="2026-04-18T14:00:00"
-            >
-            </time>
+            ></time>
           </div>
-          <div class="meta-item">
+          <div class="meta-item time-block">
             <span class="meta-label">Time remaining</span>
-            <time
-              class="meta-value highlight"
-              id="timeRemaining"
-              data-testid="test-todo-time-remaining"
-            >
-            </time>
+            <div class="time-value-row">
+              <time
+                class="meta-value highlight"
+                id="timeRemaining"
+                data-testid="test-todo-time-remaining"
+              ></time>
+              <span
+                class="overdue-indicator"
+                data-testid="test-todo-overdue-indicator"
+                hidden
+              >
+                Overdue
+              </span>
+            </div>
           </div>
         </section>
 
