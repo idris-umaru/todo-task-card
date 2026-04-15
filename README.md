@@ -17,7 +17,6 @@ https://github.com/idris-umaru/todo-task-card
 1. Open the project folder in your browser or editor.
 2. Open `index.html` directly in a browser.
 
-No build tools or package manager are required.
 
 ## What changed from Stage 0
 
@@ -34,7 +33,7 @@ Stage 1 upgrades the card from a mostly static UI to a more app-like interactive
 
 ## Design decisions
 
-- Kept the component single-card focused rather than turning it into a full task list.
+- Kept the component single card focused rather than turning it into a full task list.
 - Used semantic HTML and accessible form controls to improve clarity and screen reader support.
 - Used an inline form for edit mode to provide a cleaner user experience than prompt dialogs.
 - Kept visual styling polished with soft gradients, badges, and state-based color accents.
@@ -52,6 +51,6 @@ Stage 1 upgrades the card from a mostly static UI to a more app-like interactive
 
 - No persistence: changes are stored only in the current page session and reset on refresh.
 - Delete removes the card from the DOM only, with no undo option.
-- This is still a single-task component and does not support multiple tasks.
+- This is still a single task component and does not support multiple tasks.
 - Time formatting relies on client-side clock settings.
-- No automated test harness is included in the repository.
+
